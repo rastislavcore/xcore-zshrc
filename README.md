@@ -18,6 +18,7 @@
 - [git](https://git-scm.com/download/linux) (optional)
 - [Oh My Zsh](https://ohmyz.sh/) (optional)
 - [Tor](https://www.torproject.org) (optional, but recommended 😳)
+- [torsocks](https://formulae.brew.sh/formula/torsocks) (optional, but recommended 😳)
 - [Alt&Select](https://github.com/raisty/alt-and-select) (optional)
 
 ## Installation
