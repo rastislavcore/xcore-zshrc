@@ -37,7 +37,7 @@ wget https://raw.githubusercontent.com/raisty/xcore-zshrc/master/.zshrc -nc --no
 or cURL:
 
 ```sh
-curl https://raw.githubusercontent.com/raisty/xcore-zshrc/master/.zshrc > ~/.zshrc
+curl -sS https://raw.githubusercontent.com/raisty/xcore-zshrc/master/.zshrc >> ~/.zshrc
 ```
 
 ## Contribution
