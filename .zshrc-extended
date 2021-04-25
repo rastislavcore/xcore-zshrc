@@ -1,0 +1,47 @@
+# Path to your oh-my-zsh installation - Linux
+#export ZSH="/home/$(whoami)/.oh-my-zsh"
+# Path to your oh-my-zsh installation - Mac
+#export ZSH="/Users/$(whoami)/.oh-my-zsh"
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="dpoggi"
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(safe-paste git zsh-syntax-highlighting docker golang alt-and-select)
+
+source $ZSH/oh-my-zsh.sh
+
+###XCORE+###
+# If not running interactively, don't do anything
+case $- in
+	*i*) ;;
+	*) return;;
+esac
+
+# don't save history with space (optionally don't save it at all)
+HISTCONTROL=ignorespace
+# unset HISTFILE
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=30
+HISTFILESIZE=30
+
+# Alias definitions.
+if [ -f ~/.zsh_aliases ]; then
+	. ~/.zsh_aliases
+fi
+
+# keep environment pollution down
+unset safe_term match_lhs
+
+# Enable Torsocks (disabled by default because of delay)
+# . torsocks on
+
+###XCORE-###
