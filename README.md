@@ -20,6 +20,7 @@
 - [Tor](https://www.torproject.org) (optional, but recommended 😳)
 - [torsocks](https://formulae.brew.sh/formula/torsocks) (optional, but recommended 😳)
 - [Alt&Select](https://github.com/raisty/alt-and-select) (optional)
+- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) (optional)
 
 ## Installation
 
