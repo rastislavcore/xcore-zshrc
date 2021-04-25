@@ -26,7 +26,7 @@
 
 1. Run command
 
-> Please, make attention that your current `~/.zshrc` will be replaced.
+> Please, make attention that your current `~/.zshrc` will be modified.
 
 Using Wget:
 
