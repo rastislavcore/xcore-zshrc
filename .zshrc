@@ -6,7 +6,7 @@ case $- in
 esac
 
 # don't save history with space (optionally don't save it at all)
-HISTCONTROL=ignorespace
+setopt HIST_IGNORE_SPACE
 # unset HISTFILE
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
