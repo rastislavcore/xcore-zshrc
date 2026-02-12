@@ -1,27 +1,23 @@
 ###XCORE+###
-# If not running interactively, don't do anything
+# Interactive shells only
 case $- in
 	*i*) ;;
-	*) return;;
+	*) return ;;
 esac
 
-# don't save history with space (optionally don't save it at all)
+# History
 setopt HIST_IGNORE_SPACE
-# unset HISTFILE
+HISTSIZE=3000
+HISTFILESIZE=3000
 
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=30
-HISTFILESIZE=30
-
-# Alias definitions.
-if [ -f ~/.zsh_aliases ]; then
-	. ~/.zsh_aliases
+# Aliases
+if [[ -f "$HOME/.zsh_aliases" ]]; then
+	. "$HOME/.zsh_aliases"
 fi
 
-# keep environment pollution down
+# Keep environment pollution down (safe if unset)
 unset safe_term match_lhs
 
-# Enable Torsocks (disabled by default because of delay)
+# Torsocks (disabled by default, can slow some commands)
 # . torsocks on
-
 ###XCORE-###
