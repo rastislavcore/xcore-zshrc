@@ -2,53 +2,90 @@
 
 > For wealth and prosperity of the population.
 
+A minimal `.zshrc` (and extended Oh My Zsh variant) that loads XCORE aliases/functions and keeps startup clean. Uses only common macOS/Linux tooling.
+
 ## Requirements
 
 ### OS
 
-- Linux
-  - Ubuntu
+- Linux (tested on Ubuntu)
 - macOS
-  - Catalina
-  - Big Sur
-  - Sonoma
+	- Catalina
+	- Big Sur
+	- Sonoma
+	- Tahoe
 
 ### Applications
 
-- [Zsh](https://www.zsh.org/) (default in macOS)
-- [git](https://git-scm.com/download/linux) (optional)
-- [Oh My Zsh](https://ohmyz.sh/) (optional)
-- [Tor](https://www.torproject.org) (optional, but recommended 😳)
-- [torsocks](https://formulae.brew.sh/formula/torsocks) (optional, but recommended 😳)
-- [Alt&Select](https://github.com/raisty/alt-and-select) (optional)
-- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) (optional)
+- Zsh (default shell on macOS)  
+  https://www.zsh.org/
+
+- git (optional)  
+  https://git-scm.com/
+
+- Oh My Zsh (optional)  
+  https://ohmyz.sh/
+
+- Tor (optional, recommended)  
+  https://www.torproject.org
+
+- torsocks (optional, recommended)  
+  https://formulae.brew.sh/formula/torsocks
+
+- Alt&Select (optional)  
+  https://github.com/raisty/alt-and-select
+
+- zsh-syntax-highlighting (optional)  
+  https://github.com/zsh-users/zsh-syntax-highlighting
 
 ## Installation
 
-1. Run command
+> ⚠️ This will append to your current `~/.zshrc`. Backup is recommended.
 
-> Please, make attention that your current `~/.zshrc` will be modified.
+### Backup
+
+```sh
+cp -a ~/.zshrc ~/.zshrc.bak 2>/dev/null || true
+```
+
+### Install `.zshrc`
+
+Using cURL:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/raisty/xcore-zshrc/master/.zshrc >> ~/.zshrc
+```
 
 Using Wget:
 
 ```sh
-wget https://raw.githubusercontent.com/raisty/xcore-zshrc/master/.zshrc -nc --no-dns-cache -O ->> ~/.zshrc
+wget -qO- https://raw.githubusercontent.com/raisty/xcore-zshrc/master/.zshrc >> ~/.zshrc
 ```
 
-or cURL:
+### Reload Zsh
 
 ```sh
-curl -sS https://raw.githubusercontent.com/raisty/xcore-zshrc/master/.zshrc >> ~/.zshrc
+exec zsh -l
 ```
+
+## Notes
+
+- The XCORE block runs only for interactive shells.
+- Aliases/functions are loaded from `~/.zsh_aliases` if present.
+- History ignores commands prefixed with a space (`setopt HIST_IGNORE_SPACE`).
+- torsocks is disabled by default because it may introduce delays.
+- Extended configuration supports Oh My Zsh plugins and themes.
 
 ## Contribution
 
-Feel free to distribute, copy, contribute, comment, change the content. Fork and comments welcome.
+Feel free to distribute, copy, contribute, comment, or change the content.  
+Forks and pull requests are welcome.
 
 ## Disclaimer
 
-Use at your own risk. This tool can modify your `.zshrc` file. Backup is recommended.
+Use at your own risk.  
+This tool modifies your `~/.zshrc` file. Always keep a backup.
 
 ## License
 
-[WTFPL](LICENSE)
+WTFPL
